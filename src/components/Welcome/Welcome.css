@@ -1,0 +1,10 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

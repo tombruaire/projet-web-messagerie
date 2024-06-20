@@ -1,0 +1,8 @@
+.background {
+  background : url('../../assets/background-Home.jpg') no-repeat center center fixed;
+  height: 100vh;
+}
+
+.content {
+  width: 50%;
+}
