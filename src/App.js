@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
-function App() {
+import "./App.css";
+
+import { Navbar, Nav } from 'react-bootstrap';
+
+const App = () => {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="/">DealChat</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/">
+              Accueil
+            </Nav.Link>
+            <Nav.Link as={Link} to="/chat">
+              Chat
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <Routes location={location} key={location.pathname}>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
