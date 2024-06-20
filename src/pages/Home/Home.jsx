@@ -1,18 +1,19 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Fade } from "react-awesome-reveal";
 
 import "./Home.css";
 
-import Welcome from "../../components/Welcome/Welcome";
+import Login from "../../components/Login/Login";
 
 const Home = () => {
+
   return (
     <div className="background d-flex justify-content-center align-items-center">
-      <Container>
-        <div className="d-flex justify-content-center align-items-center">
-          <Welcome />
-        </div>
-      </Container>
+      <Fade direction="up" duration={500} triggerOnce={false}>
+          <div className="d-flex justify-content-center align-items-center">
+            <Login />
+          </div>
+      </Fade>
     </div>
   );
 };

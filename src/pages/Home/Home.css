@@ -6,3 +6,42 @@
 .content {
   width: 50%;
 }
+
+@media (max-width: 576px) {
+  /* Écran très petit (petits appareils, comme les téléphones en mode portrait) */
+  .content {
+    width: 80%; /* 100% de la largeur de l'écran */
+  }
+}
+
+/* Pour les écrans de taille moyenne (tablettes en mode portrait) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Écran petit à moyen (appareils de taille moyenne, comme les tablettes) */
+  .content {
+    width: 75%; /* 75% de la largeur de l'écran */
+  }
+}
+
+/* Pour les écrans de taille moyenne à large (tablettes en mode paysage) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Écran moyen à large (appareils plus grands, comme les tablettes en mode paysage) */
+  .content {
+    width: 70%; /* 50% de la largeur de l'écran */
+  }
+}
+
+/* Pour les écrans larges (ordinateurs de bureau) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Écran large (ordinateurs portables et petits moniteurs de bureau) */
+  .content {
+    width: 60.33%; /* 33.33% de la largeur de l'écran */
+  }
+}
+
+/* Pour les écrans très larges (grands moniteurs de bureau) */
+@media (min-width: 1201px) {
+  /* Écran très large (grands moniteurs de bureau) */
+  .content {
+    width: 55%; /* 25% de la largeur de l'écran */
+  }
+}
