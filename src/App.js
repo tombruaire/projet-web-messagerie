@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/Home/Home";
-import ChatRoom from "./pages/ChatRoom/ChatRoom";
+import DashBoard from "./pages/DashBoard/DashBoard";
 import SignUp from "./pages/SignUp/SignUp";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
       <Routes location={location} key={location.pathname}>
         <Route exact path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/chatroom" element={<ChatRoom />} />
+        <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
     </div>
   );
