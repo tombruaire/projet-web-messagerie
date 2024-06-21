@@ -41,13 +41,14 @@ const Login = () => {
               className="form-control"
               id="email"
               name="email"
+              autoComplete="off"
               onChange={formik.handleChange}
               value={formik.values.email}
               error={formik.errors.email}
-              placeholder="name@example.com"
+              placeholder="Adresse email"
               aria-describedby="emailHelp"
             />
-            <label htmlFor="email">Adresse e-mail</label>
+            <label htmlFor="email">Adresse email</label>
             {formik.errors.email && (
               <div className="text-danger">{formik.errors.email}</div>
             )}
@@ -75,14 +76,9 @@ const Login = () => {
             <button type="submit" className="btn btn-primary text-center">
               Se connecter
             </button>
-            <Link
-              to="/signup"
-              className="ms-3 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >
-              S'inscrire
-            </Link>
           </center>
-        </form>
+        </form><br/>
+        <p>Pas de compte ?<Link to="/signup" className="ms-3 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Créer un compte</Link></p>
       </div>
     </div>
   );
