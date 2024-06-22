@@ -84,7 +84,7 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <div className="content d-flex justify-content-center align-items-center">
+      <div className="dashboardContent d-flex justify-content-center align-items-center">
         <Col md={4} lg={4} xl={4}>
           <div className="fs-1 fw-bold">Contact</div>
           <input
